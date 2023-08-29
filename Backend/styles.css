@@ -1,0 +1,63 @@
+.task-manager {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    min-height: 100%;
+    padding: 3rem;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    width: 100%;
+    margin-top: 1rem;
+    max-height: 100%;
+    overflow-y: scroll;
+}
+
+.heading {
+    border: 1px solid black;
+    padding: 1rem;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    min-width: 100%;
+    border: 1px solid grey;
+    margin-bottom: 0.5rem;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem;
+    gap: 1rem;
+}
+
+.taskname {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+.search-task {
+    border: 1px solid rgb(148, 134, 134);
+    padding: 0.35rem;
+    border-radius: 0.25rem;
+}
+
+.search-task:focus {
+    border: none;
+}
+
+button {
+    cursor: pointer;
+}
