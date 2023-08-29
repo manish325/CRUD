@@ -1,0 +1,70 @@
+.crud {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    max-height: 100vh;
+    overflow: hidden;
+    
+    .header {
+        flex-basis: 10%;
+
+        .header-content {
+            display: flex;
+            
+            .heading {
+                display: flex;
+                justify-content: center;
+                font-size: 2rem;
+                font-family: 'Roboto';
+                font-weight: 500;
+                margin: 1rem;
+                align-items: center;
+                flex: 90%;
+            }
+
+            .action {
+                display: flex;
+                align-items: center;
+                padding: 1rem;
+            }
+        }
+    }
+
+    .table-container {
+        flex: 90%;
+        padding: 1rem;
+        border: 1px solid ;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        table {
+            // border: 1px solid black;
+            box-shadow: 0.25rem .25rem  .75rem .75rem rgb(221, 215, 215);
+
+            .mat-icon {
+                transform: scale(0.75);
+                margin: 0 0.4rem 0 0;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .empty-state {
+        align-items: center;
+        justify-content: center;
+
+        .card {
+            padding: 1rem;
+
+            .action {
+                display: flex;
+                justify-content: center;
+                align-items: end;
+                padding: 1rem;
+            }
+        }
+    }
+}

@@ -18,6 +18,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatTableModule } from '@angular/material/table';
 import { MAT_TABS_CONFIG, MatTabsModule } from '@angular/material/tabs';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { HttpClientModule } from '@angular/common/http';
 
 export const materialModules = [
     MatTabsModule,
@@ -37,5 +39,7 @@ export const materialModules = [
     MatAutocompleteModule,
     MatStepperModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSnackBarModule,
+    HttpClientModule
 ]

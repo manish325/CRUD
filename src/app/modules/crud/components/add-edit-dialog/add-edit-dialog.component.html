@@ -1,1 +1,37 @@
-<p>add-edit-dialog works!</p>
+<main class="dialog">
+    <mat-card>
+        <mat-card-title>
+            <h1>
+                {{data.operation === 'EDIT' ?'Update' : 'Add'}} {{data?.row?.name || 'User'}}
+            </h1>
+        </mat-card-title>
+        <mat-card-content>
+            <form action="" [formGroup]="crudForm" class="form">
+                <mat-form-field>
+                    <mat-label>
+                        Name
+                    </mat-label>
+                    <input type="text" matInput [formControl]="$any(crudForm.get('name'))">
+                    <mat-error>Please Enter Name</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>
+                        Email
+                    </mat-label>
+                    <input type="email" matInput [formControl]="$any(crudForm.get('email'))">
+                    <mat-error>Please Enter Valid Email</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>
+                        Contact No
+                    </mat-label>
+                    <input type="text" matInput [formControl]="$any(crudForm.get('number'))">
+                    <mat-error>Contact Number is required!</mat-error>
+                </mat-form-field>
+            </form>
+            <div class="action">
+                <button mat-raised-button color="primary" [disabled]="!crudForm.valid && crudForm.touched" (click)="handleClick()">Submit</button>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</main>

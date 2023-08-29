@@ -1,1 +1,24 @@
-<p>crud works!</p>
+<main class="crud">
+    <mat-card class="header">
+        <mat-card-content class="header-content">
+            <h1 class="heading">User Manager App</h1>
+            <div class="action">
+                <button mat-raised-button color="accent" (click)="addUser()">Add</button>
+            </div>
+        </mat-card-content>
+    </mat-card>
+    <div class="table-container" *ngIf="users.length">
+        <app-data-grid [dataSource]="users" [displayedColumns]="displayedColumns" [useColumns]="useColumns" (action)="actionHandler($event)"></app-data-grid>
+    </div>
+
+    <div class="table-container empty-state" *ngIf="!users.length">
+            <mat-card class="card">
+                <mat-card-title>
+                    No User Added Yet!
+                </mat-card-title>
+                <mat-card-actions class="action">
+                    <button mat-raised-button color="accent" (click)="addUser()">Add</button>
+                </mat-card-actions>
+            </mat-card>
+    </div>
+</main>
